@@ -33,7 +33,7 @@ def estimate_norm(lmk):
     return min_M, min_index
 
 
-def norm_crop(img, landmark, image_size=112):
+def norm_crop(img, landmark, image_size=128):
     M, pose_index = estimate_norm(landmark)
     warped = cv2.warpAffine(img, M, (image_size, image_size), borderValue=0.0)
     return warped
