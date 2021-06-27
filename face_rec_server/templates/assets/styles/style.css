@@ -1,0 +1,106 @@
+body {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 24px;
+}
+
+.has-margin-right-20 {
+  margin-right: 20px;
+}
+
+.unset-padding-top {
+  padding-top: unset!important;
+}
+
+.unset-padding-bottom {
+  padding-bottom: unset!important;
+}
+
+.is-160x160 {
+  height: 160px;
+  width:  160px;
+}
+
+.is-height-100 {
+  height: 100%;
+}
+
+.is-height-96px {
+  height: 64px;
+}
+
+.is-height-64px {
+  height: 64px;
+}
+
+.is-margin-20px {
+  margin: 20px;
+}
+
+.is-margin-1rem {
+  margin: 1rem;
+}
+
+.logo {
+  background-image: url('../images/big.png');
+}
+
+.image-cover {
+  background-position: center center;
+  background-repeat:   no-repeat;
+  background-size:         cover;
+  -webkit-background-size: cover;
+  -moz-background-size:    cover;
+  -o-background-size:      cover;    
+}
+
+.vcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+
+.center{
+  display: flex;
+  align-items: center;
+}
+
+
+.is-border-128px {
+  border-radius: 128px;
+}
+
+.photo-scale {
+  max-width: 100%;
+  max-height: 100%;
+
+  width: 160px  !important;
+  height: 160px !important;
+
+  display: block !important;
+}
+
+.profile-shadow-0 {
+  -webkit-box-shadow: 10px 10px 15px 0px rgba(179,31,184,1);
+  -moz-box-shadow: 10px 10px 15px 0px rgba(179,31,184,1);
+  box-shadow: 10px 10px 15px 0px rgba(179,31,184,1);
+}
+
+.profile-shadow-1 {
+  -webkit-box-shadow: 10px 10px 15px 0px rgba(241,57,185,1);
+  -moz-box-shadow: 10px 10px 15px 0px rgba(241,57,185,1);
+  box-shadow: 10px 10px 15px 0px rgba(241,57,185,1);
+}
+
+.profile-shadow-2 {
+  -webkit-box-shadow: 10px 13px 15px 0px rgba(251,91,162,1);
+  -moz-box-shadow: 10px 13px 15px 0px rgba(251,91,162,1);
+  box-shadow: 10px 13px 15px 0px rgba(251,91,162,1);
+}
+
+.profile-shadow-3 {
+  -webkit-box-shadow: 10px 13px 15px 0px rgba(251,126,131,1);
+  -moz-box-shadow: 10px 13px 15px 0px rgba(251,126,131,1);
+  box-shadow: 10px 13px 15px 0px rgba(251,126,131,1);
+}

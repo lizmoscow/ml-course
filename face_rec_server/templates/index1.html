@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+
+		<title>SimFace</title>
+
+		<link rel="icon"       href="assets/images/32.png" type="image/png">
+		<link rel="stylesheet" href="assets/styles/bulma.min.css">
+		<link rel="stylesheet" href="assets/styles/animate.min.css">
+		<link rel="stylesheet" href="assets/styles/style.css">
+		<link rel="stylesheet" href="assets/styles/upload.css">
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap">
+		<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+		<script id="upload-template" type="text/template">		
+			<form class="upload upload-shadow animated" method="get" action="" enctype="multipart/form-data">
+				<div class="upload-border"> 
+
+					<div class="container has-text-centered is-white is-height-100 vcenter">
+						<span id="upload-icon" class="icon upload-icon">
+							<i class="fas fa-upload fa-3x"></i>
+						</span>
+
+						<span id="upload-spinner" class="icon upload-spinner is-hidden">
+							<i class="fas fa-spinner fa-spin fa-3x"></i>
+						</span>
+
+						<input 	class="is-hidden"
+								type="file"
+								name="file"
+								id="file"
+								accept="image/*"
+								multiple/>
+
+					</div>
+				</div>
+			</form>
+		</script>
+
+		<script id="flipper-logo-and-photo-template" type="text/template">
+			<div id="flip"></div>
+			<span class="title is-2">SimFace</span>
+		</script>
+
+		<script id="logo-template" type="text/template">
+			<div id="logo" class="container logo image-cover image is-160x160"></div>		
+		</script>
+
+		<script id="photo-template" type="text/template">
+			<div class="container image is-160x160">
+				<img id="photo" class="photo-scale is-rounded">
+			</div>
+		</script>
+
+		<script id="profilelist-template" type="text/template">
+			<div></div>
+		</script>
+
+		<script id="flipper-upload-and-profiles-template" type="text/template">
+			<div id="flip"></div>
+		</script>
+
+
+		
+		<script id="profile-template" type="text/template">
+			<!-- profile-shadow-<%= index %> -->
+			<div class="card is-border-128px" style="margin-bottom: 16px;">
+				<div class="card-content" style="padding: 1rem;" >
+				  <div class="media">
+					<div class="media-left">
+						<figure class="image is-64x64 container">
+							<img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+						</figure>
+					</div>
+					<div class="media-content">
+						<!-- center -->
+						<div class="container is-height-64px "> 
+							<p class="is-5">
+								<a href="<%= profileURL %>" target="_">@<%= username %></a>
+							</p>
+							<% if (typeof(postURL) !== "undefined") { %>
+								<p class="is-7">
+									<a href="<%= postURL %>" target="_"><%= post %></a>
+								</p>
+							<% } %>
+						</div>
+					</div>
+					<div class="media-right is-height-96px">
+						<div class="container is-height-100 vcenter has-text-centered">
+							<p class="title is-5"><%= score %>%</p>
+						</div>
+					</div>
+				  </div>
+				</div>
+			</div>
+		</script>
+
+		<script id="refresh-template" type="text/template">
+			<span id="refresh" class="icon refresh-spinner is-height-64px is-margin-1rem">
+				<i class="fas fa-sync fa-3x"></i>
+			</span>
+		</script>
+
+		<script id="app-template" type="text/template">
+			<div class="hero is-light is-bold is-fullheight">
+				<div class="hero-head">
+					<div class="columns">
+						<div class="column is-offset-11 is-1 vcenter has-text-centered">
+							<div id="refresh"></div>
+						</div>
+					</div>
+	
+				</div>
+				<div class="hero-body">
+					<div class="container">
+						<div class="columns">
+							<div class="column is-offset-4 is-4 has-text-centered ">
+								<div id="flipper-logo-and-photo"></div>
+							</div>
+						</div>
+						<div class="columns">
+							<div class="column is-offset-4 is-4">
+								<div id="flipper-upload-and-profiles"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hero-foot">
+					<div class="container is-pulled-right has-margin-right-20">
+						Version: <span id="version"></span>
+					</div>
+				</div>
+			</div>
+		</script>
+
+	</head>
+	<body>
+		<script src="assets/libs/jquery-min.js"></script>
+		<script src="assets/libs/underscore-min.js"></script>
+		<script src="assets/libs/backbone-min.js"></script>
+
+		<script src="assets/polyfills/object.assign.js"></script>
+
+		<script src="src/Mixin/AnimatableMixin.js"></script>
+		<script src="src/Mixin/AnimationMixin.js"></script>
+
+		<script src="src/Model/UploadModel.js"></script>
+		<script src="src/Model/ProfileModel.js"></script>
+
+		<script src="src/View/UploadView.js"></script>
+		<script src="src/View/LogoView.js"></script>
+		<script src="src/View/PhotoView.js"></script>
+		<script src="src/View/FlipperView.js"></script>
+		<script src="src/View/ProfileView.js"></script>
+		<script src="src/View/ProfileListView.js"></script>
+		<script src="src/View/AppView.js"></script>
+		<script src="src/View/RefreshView.js"></script>
+
+		<script src="src/Collection/ProfileCollection.js"></script>
+
+		<script src="src/Model/AppModel.js"></script>
+
+		<script src="src/App.js"></script>
+	</body>
+</html>
